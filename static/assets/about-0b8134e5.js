@@ -1,0 +1,1 @@
+import{d as n,r as o,o as s,g as c,h as r,a,u}from"./index-2625a230.js";const _=["innerHTML"],l=n({__name:"about",setup(i){const e=o("");return s(async()=>{const{data:t}=await u("/api/about").text();e.value=a(t)}),(t,f)=>(c(),r("div",{innerHTML:a(e)},null,8,_))}});export{l as default};

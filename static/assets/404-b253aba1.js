@@ -1,0 +1,1 @@
+import{d as a,z as o,h as n,q as s,j as r,a as c,g as u}from"./index-2625a230.js";const d={p:"x4 y10",text:"center teal-700 dark:gray-200"},i=a({__name:"404",setup(p){const t=o();return(_,e)=>(u(),n("main",d,[s(" 404 Not Found "),r("button",{class:"btn-get",onClick:e[0]||(e[0]=l=>c(t).back())},"Go Back")]))}});export{i as default};

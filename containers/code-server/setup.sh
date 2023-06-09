@@ -1,0 +1,9 @@
+code-server --install-extension ms-python.python
+code-server --install-extension mgesbert.python-path
+code-server --install-extension ms-python.isort
+code-server --install-extension ms-pyright.pyright
+code-server --install-extension TabNine.tabnine-vscode
+code-server --install-extension magicstack.MagicPython
+code-server --install-extension ms-python.black-formatter
+code-server --install-extension RobbOwen.synthwave-vscode
+code-server --install-extension PKief.material-icon-theme
