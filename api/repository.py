@@ -30,7 +30,7 @@ class DatabaseKey(FaunaModel):
 
 
 class CodeServer(FaunaModel):
-    container_id: Optional[str] = Field(default=None)
+    container_id: Optional[str] = Field(default=None, unique=True)
     user: str = Field(..., description="User reference", unique=True)
     image: str = Field(default="code-server", description="Image to use")
     host_port: int = Field(default_factory=gen_port, description="Port to expose")
@@ -65,7 +65,7 @@ class CodeServer(FaunaModel):
     
 class PythonContainer(FaunaModel):
     """AioFauna container"""
-    container_id: Optional[str] = Field(default=None)
+    container_id: Optional[str] = Field(default=None, unique=True)
     user: str = Field(..., description="User reference", unique=True)
     image: str = Field(default="python-dev", description="Image to use")
     host_port: int = Field(default_factory=gen_port, description="Port to expose")

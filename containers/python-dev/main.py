@@ -19,3 +19,9 @@ async def db_insert():
 async def api_call():
     return await client.fetch("https://jsonplaceholder.typicode.com/posts")
 
+
+@app.get("/")
+async def index():
+    return {
+        "message": "Hello World!"
+    }

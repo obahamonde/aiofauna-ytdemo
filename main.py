@@ -6,11 +6,13 @@ from api.repository import CodeServer, DatabaseKey, PythonContainer, User
 
 @app.get("/")
 async def index():
-    return render_template("index.html")
+    return {
+        "message": "Welcome to the Python Playground!",
+    }
 
 app.static()
 
-@app.on_event("startup")
+#@app.on_event("startup")
 async def startup(_):
     await DatabaseKey.provision()
     await User.provision()
@@ -19,4 +21,4 @@ async def startup(_):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=8080)

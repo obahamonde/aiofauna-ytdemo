@@ -1,0 +1,13 @@
+class {{ class_name }}(BaseModel):
+{% for field_name, field in fields.items() %}
+    {{ field_name }}: {{ field['title'] }}{{ field['default'] }}
+{% endfor %}
+
+{# 
+
+class {{ class_name | fmt['pascal_case']}}(BaseModel):
+{% for field_name, field in fields.items() %}
+    {{ field_name | fmt['snake_case'] }}: {{ field['title'] }} = {{ field['default'] | fmt['field_info'] }}
+
+
+ #}

@@ -79,11 +79,16 @@ async def pipeline(user:str):
     return {
         "python": {
             "dns": python_dns,
-            "url": f"https://{python_name}.aiofauna.com"
+            "url": f"https://{python_name}.aiofauna.com",
+            "port": python_port,
+            "container_id": python.container_id,
+           
         },
         "codeserver": {
             "dns": codeserver_dns,
-            "url": f"https://{codeserver_name}.aiofauna.com"
+            "url": f"https://{codeserver_name}.aiofauna.com",
+            "port": codeserver_port,
+            "container_id": codeserver.container_id,
         }
     }
     
@@ -92,7 +97,7 @@ async def send_event(sse: EventSourceResponse):
     """Send an event"""
     await sse.send(json.dumps({"value": randint(0, 60)})) # pylint: disable=all
     await asyncio.sleep(1)
-    
+    2
     
 @app.sse("/api/sse/{container_id}/stats")
 async def send_stats(sse: EventSourceResponse, container_id:str):
